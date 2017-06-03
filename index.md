@@ -58,8 +58,8 @@ float duration[] =
   1, 1, 1, 0.5, 0.5,    1, 0.5, 0.25, 0.25, 0.25, 0.5,    0.5, 0.5, 0.5, 0.25, 0.5, 1,
   0.5, 0.5, 0.5, 0.5, 1, 1,    1, 1, 1, 0.5, 0.5,    1 + 0.5, 0.5, 1, 1,
   1, 1, 1, 0.5, 0.5,    1.5, 0.5, 1, 1,    1, 1, 1, 1,
-  0.5, 0.5, 1, 1, 0.5, 0.5,    1.5, 0.25, 0.5, 1,    1, 1, 1, 1,
-  1, 1, 1, 1,    1, 1, 1, 1,    0.5, 0.5, 1, 1, 0.5, 0.5,
+  0.5, 0.5, 1, 1, 0.5, 0.5,    1.5, 0.25, 0.5, 1,    1, 1, 1, 1,
+yi  1, 1, 1, 1,    1, 1, 1, 1,    0.5, 0.5, 1, 1, 0.5, 0.5,
   1, 0.5, 0.5, 1, 1,    1, 1, 1, 1,    1, 1, 1, 1,
   0.5, 0.5, 1, 1, 0.5, 0.5,    1, 0.5, 0.25, 0.5, 1,    1, 1, 1, 0.5, 0.5
 };
@@ -68,7 +68,7 @@ float duration[] =
 int length;
 int tonePin = 8; 
 
-void setup()
+cvoid setup()
 {
   pinMode(tonePin, OUTPUT);
   length = sizeof(tune) / sizeof(tune[0]);
@@ -88,7 +88,7 @@ void loop()
 
 
 ### 作业2 -- 声光控灯
-
+弱光环境下，有声音则亮灯，持续一段时间后，若无声音，则灭灯
 ```
 
 #include <Adafruit_NeoPixel.h>
@@ -114,7 +114,7 @@ void loop()
   if (light_state < 170 && sound_state > 600) {
     ColorLED.setPixelColor(0, ColorLED.Color(55, 55, 55));
     ColorLED.show();
-    delay(4000);
+    delay(30000);
   }
   else {
     ColorLED.setPixelColor(0, ColorLED.Color(0, 0, 0));
@@ -128,6 +128,7 @@ void loop()
 }
 ```
 
-### Support or Contact
+### 小组作业
+“司男” ！
+详见提交的作业包 XD
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
